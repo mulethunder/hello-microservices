@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: helloworld.mulethunder.cloud
+  name: hello-nodejs-pod
   labels:
-    app: helloworld.mulethunder.cloud
+    app: hello-nodejs
 spec:
   containers:
-  - name: helloworldk8sdemo
+  - name: hello-nodejs-k8s-demo
     image: mulethunder/hello-microservices-k8s
     ports:
     - name: nodejs-port

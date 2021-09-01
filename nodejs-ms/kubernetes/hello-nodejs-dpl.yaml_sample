@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-nodejs-deployment
+  labels:
+    app: hello-nodejs
+    microservice: app
+  namespace: hello-microservices
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-nodejs
+      microservice: app
+  template:
+    metadata:
+      labels:
+        app: hello-nodejs
+        microservice: app
+    spec:
+      containers:
+      - name: hhello-nodejs-microservices-k8s
+        image: ENTER_IMAGE_TAG_NAME_HERE
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: "1"
+          requests:
+            memory: 256Mi
+            cpu: "0.2"        
+        env:         
+        - name: PORT
+          value: "3000"                      
+        ports:
+        - containerPort: 3000
