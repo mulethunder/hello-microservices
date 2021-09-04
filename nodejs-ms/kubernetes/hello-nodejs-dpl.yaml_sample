@@ -8,6 +8,7 @@ metadata:
   namespace: hello-microservices
 spec:
   replicas: 2
+  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: hello-nodejs
