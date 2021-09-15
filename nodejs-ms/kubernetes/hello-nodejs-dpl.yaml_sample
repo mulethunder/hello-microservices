@@ -20,7 +20,7 @@ spec:
         microservice: app
     spec:
       containers:
-      - name: hhello-nodejs-microservices-k8s
+      - name: hello-nodejs-microservices-k8s
         image: ENTER_IMAGE_TAG_NAME_HERE
         resources:
           limits:
